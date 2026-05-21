@@ -9,12 +9,17 @@ const decorativeImages = ['/images/elemento-1.png', '/images/elemento-2.png', '/
 
 export function Problems() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative py-24 px-4 overflow-hidden bg-gradient-to-b from-cream via-orange-50 to-cream border-t-2 border-primary/10">
+      {/* Diagonal pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+        backgroundImage: 'repeating-linear-gradient(45deg, #1A1A1A, #1A1A1A 1px, transparent 1px, transparent 12px)'
+      }} />
+
       {/* Decorative background elements */}
-      <div className="absolute top-10 right-0 w-40 md:w-64 opacity-10 pointer-events-none">
+      <div className="absolute top-10 right-0 w-40 md:w-64 opacity-15 pointer-events-none">
         <img src="/images/elemento-4.png" alt="" className="w-full h-auto" />
       </div>
-      <div className="absolute bottom-10 left-0 w-40 md:w-64 opacity-10 pointer-events-none">
+      <div className="absolute bottom-10 left-0 w-40 md:w-64 opacity-15 pointer-events-none">
         <img src="/images/elemento-1.png" alt="" className="w-full h-auto" />
       </div>
 
