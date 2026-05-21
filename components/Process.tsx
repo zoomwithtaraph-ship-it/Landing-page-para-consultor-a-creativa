@@ -5,7 +5,15 @@ import { Calendar, Search, Video } from 'lucide-react'
 import { CONTENT } from '@/lib/content'
 
 const stepIcons = [Calendar, Search, Video]
-const stepImages = ['/images/foto-2.jpg', '/images/foto-3.jpg', '/images/sebastian.jpg']
+
+// Imágenes relacionadas con cada paso (de Unsplash, optimizadas)
+const stepImages = [
+  'https://images.unsplash.com/photo-1606327054629-64c8b0fd6e4f?w=800&q=80', // Calendar/agenda
+  'https://images.unsplash.com/photo-1561070791-2526d30994b8?w=800&q=80', // Brand review/design
+  'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80', // Video call/Zoom
+]
+
+const stepAlt = ['Agendar en calendario', 'Revisión de marca', 'Sesión por Zoom']
 
 export function Process() {
   return (
@@ -46,26 +54,28 @@ export function Process() {
                 viewport={{ once: true }}
                 className="relative group h-full"
               >
-                {/* Card with fixed flex layout */}
                 <div className="relative bg-white rounded-2xl shadow-xl border border-primary/10 hover:border-primary/40 transition-all overflow-hidden hover:shadow-2xl hover:-translate-y-2 duration-300 h-full flex flex-col">
-                  {/* Image - Fixed aspect ratio */}
+                  {/* Image with fixed aspect ratio */}
                   <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 flex-shrink-0">
                     <img
                       src={stepImages[idx]}
-                      alt={step.title}
+                      alt={stepAlt[idx]}
                       className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     />
-                    {/* Number overlay */}
+                    {/* Dark overlay for badges visibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                    {/* Number badge */}
                     <div className="absolute top-4 left-4 inline-flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full font-antonio font-bold text-2xl shadow-2xl border-4 border-white z-10">
                       {step.number}
                     </div>
-                    {/* Icon overlay */}
+                    {/* Icon badge */}
                     <div className="absolute top-4 right-4 inline-flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg z-10">
                       <Icon className="w-6 h-6 text-primary" strokeWidth={2.5} />
                     </div>
                   </div>
 
-                  {/* Content - flex grow to fill */}
+                  {/* Content */}
                   <div className="p-6 flex-grow flex flex-col">
                     <h3 className="font-antonio font-bold text-xl md:text-2xl text-dark mb-3 leading-tight">
                       {step.title}

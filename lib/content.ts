@@ -6,7 +6,7 @@ export const CONTENT = {
       'Diagnóstico honesto de tu identidad visual en 30 minutos. Descubre qué frena tu crecimiento y lleva 3 mejoras concretas para aplicar ya.',
     ctaPrimary: 'Agendar mi sesión gratuita',
     ctaSecondary: 'Ver cómo funciona',
-    trust: 'Sin venta encubierta · Si no encajamos, te lo digo · 100% gratis',
+    trust: '30 minutos · Sin compromiso · 100% gratis',
   },
   problems: {
     title: 'Si te suena alguno de estos, esta sesión es para ti.',
@@ -120,7 +120,7 @@ export const CONTENT = {
   ],
   booking: {
     title: 'Elige tu hora. Yo me ocupo del resto.',
-    subtitle: '30 minutos, gratis, sin venta encubierta.',
+    subtitle: '30 minutos. Gratis. Sin compromiso.',
     fallbackText: '¿Prefieres escribirme?',
     fallbackEmail: 'zoomwithtaraph@gmail.com',
   },

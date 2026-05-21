@@ -2,6 +2,7 @@ import { Hero } from '@/components/Hero'
 import { Problems } from '@/components/Problems'
 import { Benefits } from '@/components/Benefits'
 import { Process } from '@/components/Process'
+import { AboutMe } from '@/components/AboutMe'
 import { FinalCTA } from '@/components/FinalCTA'
 import { Footer } from '@/components/Footer'
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Problems />
       <Benefits />
       <Process />
+      <AboutMe />
       <FinalCTA />
       <Footer />
     </main>
