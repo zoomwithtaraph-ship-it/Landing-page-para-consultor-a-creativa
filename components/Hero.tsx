@@ -19,17 +19,21 @@ export function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/sebastian.jpg"
         >
           <source
-            src="https://videos.pexels.com/video-files/7989680/7989680-uhd_2560_1440_30fps.mp4"
+            src="https://cdn.coverr.co/videos/coverr-a-creative-designer-working-on-his-laptop-2633/1080p.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-young-graphic-designer-doing-creative-work-32988-large.mp4"
             type="video/mp4"
           />
         </video>
 
         {/* Cream overlay for brand colors */}
-        <div className="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/80 to-cream/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream/85 via-cream/75 to-cream/90" />
 
         {/* Orange tint */}
         <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
